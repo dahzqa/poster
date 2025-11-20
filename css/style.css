@@ -48,6 +48,16 @@ main{
     border-radius: 14px;
     color: white;
 }
+.red{
+    display: flex;
+    gap: 12px;
+    padding: 4px;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #0077FF;
+    height: 44px;
+    width: 44px;
+}
 
 .banner {
     display: flex;
@@ -284,12 +294,50 @@ main{
     }
 }
 
-.footer-elements {
-    display: flex;
-    width: 1368px;
-    height: 160px;
+.mobile-only{
+    display: none;
+}
+.decstop-only{
+    display: inherit;
 }
 
-.footer-elements > * {
-    flex: 1 1 0;
+
+@media (max-width: 1024px){
+    .mobile-only{
+        display: inherit;
+    }
+    .decstop-only{
+        display: none;
+    }
+    .jobs{
+        flex-direction: column;
+    }
+    .filters{
+        width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .banner {
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+    .vacancy{
+        flex-basis: 100%;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    .nav-text{
+        flex-wrap: wrap;
+    }
+    .filters-tags{
+        flex-wrap: wrap;
+    }
+    .job-tags{
+        flex-wrap: wrap;
+    }
 }
